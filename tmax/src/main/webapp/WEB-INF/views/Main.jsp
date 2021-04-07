@@ -10,7 +10,7 @@
 	$(document).ready(function(){
 		$('#pupupBtn').on("click", function(){
 			alert("click");
-			window.open("/webSocket.do", "width=700, height=600").focus();
+			window.open("/webSocket.do", "test","width=500, height=600");
 		});
 	});
 
@@ -36,7 +36,7 @@
 		<div class="column middle">
 			<h2>Main Content</h2>
 			<p><a href="/getSession.do">Http Session TEST</a></p>
-			<p><a href="/webSocket.do">WebSocet TEST</a></p>
+			<p id="pupupBtn"><a href="#">WebSocet TEST</a></p>
 			<p><a href="/classInfo.do">ClassInfo TEST</a></p>
 		</div>
 
