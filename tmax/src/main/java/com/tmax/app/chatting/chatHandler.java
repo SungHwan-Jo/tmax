@@ -25,12 +25,13 @@ public class chatHandler extends TextWebSocketHandler {
 	//클라이언트가 메시지를 보냈을 때 호출되는 메소드
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+		System.out.println("message 보냄");
 		String msg = message.getPayload();
 		//전송된 메시지를 모든 세션들에게 보냄
 		for(WebSocketSession s : list) {
 			s.sendMessage(new TextMessage(session.getAcceptedProtocol() + ":" + msg));
 		}
-		super.handleTextMessage(session, message);
+		//super.handleTextMessage(session, message);
 	}
 
 	//클라이언트가 접속을 종료했을 때 호출되는 메소드
